@@ -2,8 +2,7 @@
 
 import { useState, useEffect } from 'react'
 import Link from 'next/link'
-import { FiMenu, FiX } from 'react-icons/fi'
-import CodeHappyLogo from './CodeHappyLogo'
+import { FiMenu, FiX, FiCode } from 'react-icons/fi'
 import LanguageSwitcher from './LanguageSwitcher'
 import { useTranslation, Locale } from '@/lib/translations'
 
@@ -48,8 +47,8 @@ const Header = ({ className = '' }: HeaderProps) => {
       } ${className || ''}`}
     >
       <div className="w-full max-w-6xl mx-auto px-4 flex justify-between items-center">
-        <Link href="/" className="w-10 md:w-12 transition-all duration-300">
-          <CodeHappyLogo color={scrolled ? 'black' : 'white'} />
+        <Link href="/" className="transition-all duration-300">
+          <FiCode className="w-8 h-8 md:w-10 md:h-10" color={scrolled ? 'black' : 'white'} />
         </Link>
 
         <div className="flex items-center gap-6">

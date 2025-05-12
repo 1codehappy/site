@@ -6,7 +6,7 @@ import { useTranslation, Locale } from '@/lib/translations'
 // Simple Contact section component
 const ContactSection = () => {
   const [currentLang, setCurrentLang] = useState<Locale>('en')
-  
+
   useEffect(() => {
     // Get language from localStorage
     const storedLang = localStorage.getItem('language') as Locale
@@ -131,7 +131,7 @@ const ContactSection = () => {
               <h4 className="font-bold mb-3">{t('contact_social')}</h4>
               <div className="flex space-x-4">
                 <a
-                  href="https://github.com/"
+                  href="https://github.com/1codehappy"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="h-10 w-10 rounded-full bg-gray-100 dark:bg-gray-800 flex items-center justify-center text-gray-600 dark:text-gray-300 hover:bg-primary hover:text-white transition-colors"
@@ -140,22 +140,13 @@ const ContactSection = () => {
                   <FiGithub />
                 </a>
                 <a
-                  href="https://linkedin.com/in/"
+                  href="https://linkedin.com/in/1giba/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="h-10 w-10 rounded-full bg-gray-100 dark:bg-gray-800 flex items-center justify-center text-gray-600 dark:text-gray-300 hover:bg-primary hover:text-white transition-colors"
                   aria-label="LinkedIn"
                 >
                   <FiLinkedin />
-                </a>
-                <a
-                  href="https://twitter.com/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="h-10 w-10 rounded-full bg-gray-100 dark:bg-gray-800 flex items-center justify-center text-gray-600 dark:text-gray-300 hover:bg-primary hover:text-white transition-colors"
-                  aria-label="Twitter"
-                >
-                  <FiTwitter />
                 </a>
               </div>
             </div>
