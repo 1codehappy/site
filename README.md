@@ -1,28 +1,28 @@
-# Site Institucional
+# Personal Website
 
-Site institucional moderno e responsivo desenvolvido com Next.js 14, TypeScript, e Tailwind CSS, rodando em um contêiner Docker Alpine.
+A modern and responsive personal website developed with Next.js 14, TypeScript, and Tailwind CSS, running in an Alpine Docker container.
 
-## Tecnologias Utilizadas
+## Technologies Used
 
-- **Next.js 14**: Framework React para renderização híbrida e SSG
-- **TypeScript**: Tipagem estática para JavaScript
-- **Tailwind CSS**: Framework CSS utilitário
-- **Framer Motion**: Biblioteca para animações
-- **Docker**: Contêiner baseado em Alpine Linux
-- **React Icons**: Biblioteca de ícones
+- **Next.js 14**: React framework for hybrid rendering and SSG
+- **TypeScript**: Static typing for JavaScript
+- **Tailwind CSS**: Utility-first CSS framework
+- **Framer Motion**: Animation library
+- **Docker**: Container based on Alpine Linux
+- **React Icons**: Icon library
 
-## Estrutura do Projeto
+## Project Structure
 
 ```
 ├── src/
-│   ├── app/              # Arquivos do App Router do Next.js
-│   ├── components/       # Componentes reutilizáveis
-│   ├── lib/              # Funções e utilitários
-│   └── styles/           # Estilos globais e componentes
-├── public/               # Arquivos estáticos (imagens, fontes)
-├── Dockerfile            # Configuração do Docker
-├── docker-compose.yml    # Configuração do Docker Compose
-└── package.json          # Dependências e scripts
+│   ├── app/              # Next.js App Router files
+│   ├── components/       # Reusable components
+│   ├── lib/              # Functions and utilities
+│   └── styles/           # Global styles and components
+├── public/               # Static files (images, fonts)
+├── Dockerfile            # Docker configuration
+├── docker-compose.yml    # Docker Compose configuration
+└── package.json          # Dependencies and scripts
 ```
 
 ## How to Run
@@ -66,6 +66,8 @@ npm run dev
 - ✅ Smooth anchor navigation
 - ✅ Functional contact form (add your backend logic)
 - ✅ Reusable components
+- ✅ Multilingual support (English/Portuguese)
+- ✅ Color scheme
 
 ## License
 
