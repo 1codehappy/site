@@ -63,22 +63,22 @@ const Header = ({ className = '' }: HeaderProps) => {
             <nav>
               <ul className="flex space-x-6">
                 <li>
-                  <Link href="/" className="block py-2 hover:text-primary transition">
+                  <Link href="/" className="block py-2 hover:text-[#FDD835] transition-colors">
                     {t('nav_experience')}
                   </Link>
                 </li>
                 <li>
-                  <Link href="/#about" className="block py-2 hover:text-primary transition">
+                  <Link href="/#about" className="block py-2 hover:text-[#FDD835] transition-colors">
                     {t('nav_about')}
                   </Link>
                 </li>
                 <li>
-                  <Link href="/#services" className="block py-2 hover:text-primary transition">
+                  <Link href="/#services" className="block py-2 hover:text-[#FDD835] transition-colors">
                     {t('nav_services')}
                   </Link>
                 </li>
                 <li>
-                  <Link href="/#contact" className="block py-2 hover:text-primary transition">
+                  <Link href="/#contact" className="block py-2 hover:text-[#FDD835] transition-colors">
                     {t('nav_contact')}
                   </Link>
                 </li>
@@ -106,7 +106,7 @@ const Header = ({ className = '' }: HeaderProps) => {
             <li>
               <Link 
                 href="/" 
-                className="block py-2 px-3 rounded hover:bg-blue-50 transition-colors" 
+                className="block py-2 px-3 rounded hover:bg-[#FDD835]/20 hover:text-[#4CAF50] transition-colors" 
                 onClick={() => setIsMenuOpen(false)}
               >
                 {t('nav_experience')}
@@ -115,7 +115,7 @@ const Header = ({ className = '' }: HeaderProps) => {
             <li>
               <Link 
                 href="/#about" 
-                className="block py-2 px-3 rounded hover:bg-blue-50 transition-colors" 
+                className="block py-2 px-3 rounded hover:bg-[#FDD835]/20 hover:text-[#4CAF50] transition-colors" 
                 onClick={() => setIsMenuOpen(false)}
               >
                 {t('nav_about')}
@@ -124,7 +124,7 @@ const Header = ({ className = '' }: HeaderProps) => {
             <li>
               <Link 
                 href="/#services" 
-                className="block py-2 px-3 rounded hover:bg-blue-50 transition-colors" 
+                className="block py-2 px-3 rounded hover:bg-[#FDD835]/20 hover:text-[#4CAF50] transition-colors" 
                 onClick={() => setIsMenuOpen(false)}
               >
                 {t('nav_services')}
@@ -133,7 +133,7 @@ const Header = ({ className = '' }: HeaderProps) => {
             <li>
               <Link 
                 href="/#contact" 
-                className="block py-2 px-3 rounded hover:bg-blue-50 transition-colors" 
+                className="block py-2 px-3 rounded hover:bg-[#FDD835]/20 hover:text-[#4CAF50] transition-colors" 
                 onClick={() => setIsMenuOpen(false)}
               >
                 {t('nav_contact')}
