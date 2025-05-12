@@ -47,8 +47,9 @@ const Header = ({ className = '' }: HeaderProps) => {
       } ${className || ''}`}
     >
       <div className="w-full max-w-6xl mx-auto px-4 flex justify-between items-center">
-        <Link href="/" className="transition-all duration-300">
-          <FiCode className="w-8 h-8 md:w-10 md:h-10" color={scrolled ? 'black' : 'white'} />
+        <Link href="/" className="transition-all duration-300 flex items-center">
+          <FiCode className="w-7 h-7 md:w-8 md:h-8" color={scrolled ? 'black' : 'white'} />
+          <span className="ml-2 text-sm md:text-base font-semibold">Code Happy</span>
         </Link>
 
         <div className="flex items-center gap-6">
@@ -57,8 +58,8 @@ const Header = ({ className = '' }: HeaderProps) => {
             <LanguageSwitcher />
           </div>
 
-          {/* Desktop Navigation */}
-          <div className="flex items-center">
+          {/* Desktop Navigation - Hidden on mobile */}
+          <div className="hidden md:flex items-center">
             <nav>
               <ul className="flex space-x-6">
                 <li>
@@ -96,38 +97,54 @@ const Header = ({ className = '' }: HeaderProps) => {
         </div>
       </div>
 
-      {/* Mobile Menu */}
-      {isMenuOpen && (
-        <div className="md:hidden bg-white shadow-lg text-gray-900 p-4">
-          <nav>
-            <ul className="flex flex-col space-y-4">
-              <li>
-                <Link href="/#about" onClick={() => setIsMenuOpen(false)}>
-                  {t('nav_about')}
-                </Link>
-              </li>
-              <li>
-                <Link href="/#services" onClick={() => setIsMenuOpen(false)}>
-                  {t('nav_services')}
-                </Link>
-              </li>
-              <li>
-                <Link href="/#experience" onClick={() => setIsMenuOpen(false)}>
-                  {t('nav_experience')}
-                </Link>
-              </li>
-              <li>
-                <Link href="/#contact" onClick={() => setIsMenuOpen(false)}>
-                  {t('nav_contact')}
-                </Link>
-              </li>
-              <li className="pt-2">
-                <LanguageSwitcher />
-              </li>
-            </ul>
-          </nav>
-        </div>
-      )}
+      {/* Mobile Menu - Dropdown with animation */}
+      <div 
+        className={`md:hidden absolute top-full left-0 right-0 bg-white shadow-lg text-gray-900 transition-all duration-300 transform ${isMenuOpen ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-4 pointer-events-none'}`}
+      >
+        <nav className="container mx-auto px-4 py-4">
+          <ul className="flex flex-col space-y-4">
+            <li>
+              <Link 
+                href="/" 
+                className="block py-2 px-3 rounded hover:bg-blue-50 transition-colors" 
+                onClick={() => setIsMenuOpen(false)}
+              >
+                {t('nav_experience')}
+              </Link>
+            </li>
+            <li>
+              <Link 
+                href="/#about" 
+                className="block py-2 px-3 rounded hover:bg-blue-50 transition-colors" 
+                onClick={() => setIsMenuOpen(false)}
+              >
+                {t('nav_about')}
+              </Link>
+            </li>
+            <li>
+              <Link 
+                href="/#services" 
+                className="block py-2 px-3 rounded hover:bg-blue-50 transition-colors" 
+                onClick={() => setIsMenuOpen(false)}
+              >
+                {t('nav_services')}
+              </Link>
+            </li>
+            <li>
+              <Link 
+                href="/#contact" 
+                className="block py-2 px-3 rounded hover:bg-blue-50 transition-colors" 
+                onClick={() => setIsMenuOpen(false)}
+              >
+                {t('nav_contact')}
+              </Link>
+            </li>
+            <li className="pt-2 pl-3">
+              <LanguageSwitcher />
+            </li>
+          </ul>
+        </nav>
+      </div>
     </header>
   )
 }

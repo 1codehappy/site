@@ -6,7 +6,7 @@ import { useTranslation, Locale } from '@/lib/translations'
 // Simplified Services Section component
 const ServicesSectionNew = () => {
   const [currentLang, setCurrentLang] = useState<Locale>('en')
-  
+
   useEffect(() => {
     // Get language from localStorage
     const storedLang = localStorage.getItem('language') as Locale
@@ -42,8 +42,8 @@ const ServicesSectionNew = () => {
   ]
 
   return (
-    <section 
-      id="services" 
+    <section
+      id="services"
       className="py-16 md:py-24 relative text-white"
       style={{
         backgroundImage: 'url("https://images.unsplash.com/photo-1639322537228-f710d846310a?q=80&w=2232&auto=format&fit=crop")',
@@ -55,7 +55,7 @@ const ServicesSectionNew = () => {
     >
       {/* Overlay with reduced opacity to show more of the background image */}
       <div className="absolute inset-0 bg-blue-900 bg-opacity-60"></div>
-      
+
       <div className="container mx-auto px-4 relative z-10">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold mb-4 text-white drop-shadow-lg">{t('services_title')}</h2>
@@ -63,7 +63,7 @@ const ServicesSectionNew = () => {
           <p className="text-xl max-w-2xl mx-auto text-blue-100">{t('services_description')}</p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 lg:gap-8">
           {services.map((service, index) => (
             <ServiceCard
               key={index} /* key is a React prop, not passed to the component */
@@ -78,10 +78,10 @@ const ServicesSectionNew = () => {
   )
 }
 
-// Service Card component with futuristic styling
-const ServiceCard = ({ 
-  icon, 
-  title, 
+// Service Card component with futuristic styling optimized for mobile
+const ServiceCard = ({
+  icon,
+  title,
   description
 }: {
   icon: string;
@@ -89,10 +89,10 @@ const ServiceCard = ({
   description: string;
 }) => {
   return (
-    <div className="bg-white/90 backdrop-blur-sm rounded-xl shadow-lg p-8 hover:shadow-xl hover:translate-y-[-5px] transition-all duration-300 border border-blue-100 group">
-      <div className="text-5xl text-blue-600 mb-5 group-hover:scale-110 transform transition-transform duration-300">{icon}</div>
-      <h3 className="text-xl font-bold mb-3 text-blue-900">{title}</h3>
-      <p className="text-gray-700">{description}</p>
+    <div className="bg-white/90 backdrop-blur-sm rounded-xl shadow-lg p-4 sm:p-6 md:p-8 hover:shadow-xl hover:translate-y-[-5px] transition-all duration-300 border border-blue-100 group">
+      <div className="text-4xl sm:text-5xl text-blue-600 mb-3 sm:mb-5 group-hover:scale-110 transform transition-transform duration-300">{icon}</div>
+      <h3 className="text-lg sm:text-xl font-bold mb-2 sm:mb-3 text-blue-900">{title}</h3>
+      <p className="text-sm sm:text-base text-gray-700">{description}</p>
     </div>
   )
 }
