@@ -43,7 +43,7 @@ const Header = ({ className = '' }: HeaderProps) => {
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 py-4 ${
         scrolled
           ? 'bg-white shadow-md text-gray-900'
-          : 'bg-blue-500 text-white'
+          : 'bg-[#4CAF50] text-white'
       } ${className || ''}`}
     >
       <div className="w-full max-w-6xl mx-auto px-4 flex justify-between items-center">

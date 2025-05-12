@@ -17,13 +17,13 @@ const AboutSection = () => {
   }, [])
 
   return (
-    <section id="about" className="bg-gray-100 text-black py-10 md:py-14 overflow-hidden">
+    <section id="about" className="bg-gray-50 text-black py-10 md:py-14 overflow-hidden">
       <div className="container mx-auto px-4">
         <div className="text-center mb-6 md:mb-8">
-          <h2 className="text-2xl md:text-3xl font-bold mb-2 md:mb-3">
+          <h2 className="text-2xl md:text-3xl font-bold mb-2 md:mb-3 text-[#4CAF50]">
             {t('about_title')}
           </h2>
-          <div className="w-16 md:w-20 h-1 bg-blue-500 mx-auto mt-1 mb-3" />
+          <div className="w-16 md:w-20 h-1 bg-[#4CAF50] mx-auto mt-1 mb-3" />
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 items-start">
@@ -59,17 +59,17 @@ const AboutSection = () => {
           </div>
 
           <div className="order-1 md:order-2">
-            <div className="bg-white rounded-lg shadow-md p-2 sm:p-3 md:p-4">
+            <div className="bg-white rounded-lg shadow-md p-2 sm:p-3 md:p-4 border-t-2 border-[#81D4FA]">
               <div className="flex items-center justify-between mb-1 sm:mb-2">
                 <div className="flex space-x-1 sm:space-x-2">
-                  <div className="w-2 h-2 sm:w-3 sm:h-3 bg-red-500 rounded-full"></div>
-                  <div className="w-2 h-2 sm:w-3 sm:h-3 bg-yellow-500 rounded-full"></div>
-                  <div className="w-2 h-2 sm:w-3 sm:h-3 bg-green-500 rounded-full"></div>
+                  <div className="w-2 h-2 sm:w-3 sm:h-3 bg-[#FDD835] rounded-full"></div>
+                  <div className="w-2 h-2 sm:w-3 sm:h-3 bg-[#4DD0E1] rounded-full"></div>
+                  <div className="w-2 h-2 sm:w-3 sm:h-3 bg-[#4CAF50] rounded-full"></div>
                 </div>
-                <div className="text-xs text-gray-500">code-happy.tsx</div>
+                <div className="text-xs text-[#4CAF50]">code-happy.tsx</div>
               </div>
               
-              <div className="bg-gray-900 text-gray-100 p-2 rounded font-mono text-xs overflow-x-auto">
+              <div className="bg-gray-900 text-gray-100 p-2 rounded font-mono text-xs overflow-x-auto border-l-2 border-[#81D4FA]">
                 <pre className="whitespace-pre-wrap break-all sm:break-normal">{
 `function CodeHappy() {
   const [isHappy, setIsHappy] = useState(true);
@@ -126,8 +126,8 @@ interface SkillBoxProps {
 
 const SkillBox = ({ title, description }: SkillBoxProps) => {
   return (
-    <div className="bg-white p-3 sm:p-4 md:p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
-      <h4 className="font-bold text-sm sm:text-base mb-1 sm:mb-2">{title}</h4>
+    <div className="bg-white p-3 sm:p-4 md:p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow border-l-2 border-[#4CAF50]">
+      <h4 className="font-bold text-sm sm:text-base mb-1 sm:mb-2 text-[#4CAF50]">{title}</h4>
       <p className="text-xs sm:text-sm text-gray-600">{description}</p>
     </div>
   )
@@ -142,13 +142,13 @@ interface TechItemProps {
 // Component for displaying tech stack items with responsive sizing
 const TechItem = ({ name, icon, color }: TechItemProps) => {
   return (
-    <div className="flex flex-col items-center justify-center p-2 sm:p-3 md:p-4 bg-white rounded-lg shadow-sm hover:shadow-md transition-all duration-300 w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24">
+    <div className="flex flex-col items-center justify-center p-2 sm:p-3 md:p-4 bg-white rounded-lg shadow-sm hover:shadow-md transition-all duration-300 w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 hover:border-[#4DD0E1] border border-transparent">
       <i 
         className={icon} 
-        style={{ fontSize: 'clamp(1rem, 4vw, 2rem)', color: color || 'inherit' }}
+        style={{ fontSize: 'clamp(1rem, 4vw, 2rem)', color: color || '#81D4FA' }}
         aria-hidden="true"
       ></i>
-      <span className="mt-1 md:mt-2 text-xs sm:text-sm font-medium truncate max-w-full">{name}</span>
+      <span className="mt-1 md:mt-2 text-xs sm:text-sm font-medium truncate max-w-full text-gray-700">{name}</span>
     </div>
   )
 }

@@ -53,13 +53,13 @@ const ContactSectionNew = () => {
   }
 
   return (
-    <section id="contact" className="bg-gray-100 py-16 md:py-20">
+    <section id="contact" className="bg-gradient-to-br from-white to-[#4DD0E1]/10 py-16 md:py-20">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
-          <h2 className="text-3xl font-bold mb-4">
+          <h2 className="text-3xl font-bold mb-4 text-[#4CAF50]">
             {t('contact_title')}
           </h2>
-          <div className="w-20 h-1 bg-blue-500 mx-auto mt-2 mb-6" />
+          <div className="w-20 h-1 bg-[#4CAF50] mx-auto mt-2 mb-6" />
           <p className="text-gray-700 max-w-2xl mx-auto">
             {t('contact_description')}
           </p>
@@ -76,41 +76,41 @@ const ContactSectionNew = () => {
             </div>
 
             <div className="flex items-start gap-4">
-              <div className="text-blue-500 text-xl mt-1">
+              <div className="text-[#81D4FA] text-xl mt-1">
                 <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                 </svg>
               </div>
               <div>
-                <h4 className="font-bold">{t('contact_email')}</h4>
-                <a href="mailto:contato@codehappy.com.br" className="text-blue-500 hover:underline">
+                <h4 className="font-bold text-[#4CAF50]">{t('contact_email')}</h4>
+                <a href="mailto:contato@codehappy.com.br" className="text-[#81D4FA] hover:text-[#4DD0E1] hover:underline transition-colors">
                   contato@codehappy.com.br
                 </a>
               </div>
             </div>
 
             <div className="flex items-start gap-4">
-              <div className="text-blue-500 text-xl mt-1">
+              <div className="text-[#81D4FA] text-xl mt-1">
                 <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
                 </svg>
               </div>
               <div>
-                <h4 className="font-bold">{t('contact_location')}</h4>
+                <h4 className="font-bold text-[#4CAF50]">{t('contact_location')}</h4>
                 <p>{t('contact_country')}</p>
               </div>
             </div>
 
             {/* Social Media */}
             <div>
-              <h4 className="font-bold mb-3">{t('contact_social')}</h4>
+              <h4 className="font-bold mb-3 text-[#4CAF50]">{t('contact_social')}</h4>
               <div className="flex space-x-4">
                 <a
                   href="https://github.com/1codehappy"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="h-10 w-10 rounded-full bg-gray-200 flex items-center justify-center text-gray-600 hover:bg-blue-500 hover:text-white transition-colors"
+                  className="h-10 w-10 rounded-full bg-white flex items-center justify-center text-[#81D4FA] hover:bg-[#81D4FA] hover:text-white transition-colors shadow-sm border border-[#81D4FA]/30"
                   aria-label="GitHub"
                 >
                   <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 24 24" fill="currentColor">
@@ -121,7 +121,7 @@ const ContactSectionNew = () => {
                   href="https://linkedin.com/in/1giba"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="h-10 w-10 rounded-full bg-gray-200 flex items-center justify-center text-gray-600 hover:bg-blue-500 hover:text-white transition-colors"
+                  className="h-10 w-10 rounded-full bg-white flex items-center justify-center text-[#81D4FA] hover:bg-[#81D4FA] hover:text-white transition-colors shadow-sm border border-[#81D4FA]/30"
                   aria-label="LinkedIn"
                 >
                   <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 24 24" fill="currentColor">
@@ -134,17 +134,17 @@ const ContactSectionNew = () => {
 
           {/* Contact Form */}
           <div>
-            <div className="bg-white rounded-lg shadow-md p-8">
-              <h3 className="text-2xl font-bold mb-6">{t('contact_form_title')}</h3>
+            <div className="bg-white rounded-lg shadow-md p-8 border-t-2 border-[#4CAF50]">
+              <h3 className="text-2xl font-bold mb-6 text-[#4CAF50]">{t('contact_form_title')}</h3>
 
               {isSubmitted ? (
                 <div className="text-center py-8">
-                  <div className="text-5xl text-green-500 mb-4">
+                  <div className="text-5xl text-[#4CAF50] mb-4">
                     <svg xmlns="http://www.w3.org/2000/svg" className="h-16 w-16 mx-auto" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                     </svg>
                   </div>
-                  <h4 className="text-2xl font-bold">{t('contact_form_success_title')}</h4>
+                  <h4 className="text-2xl font-bold text-[#4CAF50]">{t('contact_form_success_title')}</h4>
                   <p className="text-gray-600 mt-2">
                     {t('contact_form_success_message')}
                   </p>
@@ -213,7 +213,7 @@ const ContactSectionNew = () => {
 
                   <button
                     type="submit"
-                    className="w-full bg-blue-500 hover:bg-blue-600 text-white font-bold py-3 px-6 rounded-md transition-colors flex items-center justify-center"
+                    className="w-full bg-[#FFEB3B] hover:bg-[#FDD835] text-gray-800 font-bold py-3 px-6 rounded-md transition-colors flex items-center justify-center shadow-md"
                     disabled={isSubmitting}
                   >
                     {isSubmitting ? t('contact_form_sending') : t('contact_form_send')}

@@ -46,7 +46,7 @@ const LanguageSwitcher = () => {
   return (
     <div id="language-switcher" className="relative">
       <button 
-        className="flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white px-3 py-1.5 rounded-full transition-colors"
+        className="flex items-center gap-2 bg-[#4CAF50] hover:bg-[#43A047] text-white px-3 py-1.5 rounded-full transition-colors shadow-sm"
         onClick={(e: React.MouseEvent) => {
           e.stopPropagation();
           setIsOpen(!isOpen);
@@ -59,10 +59,10 @@ const LanguageSwitcher = () => {
       </button>
 
       {isOpen && (
-        <div className="absolute right-0 mt-2 w-40 bg-white rounded-md shadow-lg z-50 overflow-hidden border border-gray-200">
+        <div className="absolute right-0 mt-2 w-40 bg-white rounded-md shadow-lg z-50 overflow-hidden border border-[#4CAF50]/20">
           <div className="py-1">
             <button
-              className={`flex items-center w-full text-left px-4 py-2 text-sm hover:bg-blue-50 ${currentLang === 'en' ? 'bg-blue-50 text-blue-700 font-medium' : 'text-gray-700'}`}
+              className={`flex items-center w-full text-left px-4 py-2 text-sm hover:bg-[#4CAF50]/10 ${currentLang === 'en' ? 'bg-[#FDD835]/10 text-[#4CAF50] font-medium' : 'text-gray-700'}`}
               onClick={(e: React.MouseEvent) => {
                 e.stopPropagation();
                 toggleLanguage('en');
@@ -73,13 +73,13 @@ const LanguageSwitcher = () => {
               </span>
               English
               {currentLang === 'en' && (
-                <svg className="ml-auto w-4 h-4 text-blue-600" fill="currentColor" viewBox="0 0 20 20">
+                <svg className="ml-auto w-4 h-4 text-[#4CAF50]" fill="currentColor" viewBox="0 0 20 20">
                   <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                 </svg>
               )}
             </button>
             <button
-              className={`flex items-center w-full text-left px-4 py-2 text-sm hover:bg-blue-50 ${currentLang === 'pt' ? 'bg-blue-50 text-blue-700 font-medium' : 'text-gray-700'}`}
+              className={`flex items-center w-full text-left px-4 py-2 text-sm hover:bg-[#4CAF50]/10 ${currentLang === 'pt' ? 'bg-[#FDD835]/10 text-[#4CAF50] font-medium' : 'text-gray-700'}`}
               onClick={(e: React.MouseEvent) => {
                 e.stopPropagation();
                 toggleLanguage('pt');
