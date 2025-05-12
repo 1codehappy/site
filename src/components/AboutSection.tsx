@@ -97,9 +97,22 @@ const AboutSection = () => {
 
         <div className="mt-20 text-center">
           <h3 className="text-2xl font-bold mb-6">{t('about_tech_title')}</h3>
-          <div className="flex flex-wrap justify-center gap-4 max-w-3xl mx-auto">
-            {/* Tech stack would go here */}
-          </div>  
+          <div className="flex flex-wrap justify-center gap-6 max-w-4xl mx-auto">
+            <TechItem name="Laravel" icon="devicon-laravel-plain colored" />
+            <TechItem name="React" icon="devicon-react-original colored" />
+            <TechItem name="React Native" icon="devicon-react-original colored" />
+            <TechItem name="Vue" icon="devicon-vuejs-plain colored" />
+            <TechItem name="Python" icon="devicon-python-plain colored" />           
+            <TechItem name="Redis" icon="devicon-redis-plain colored" />
+            <TechItem name="MySQL" icon="devicon-mysql-plain colored" />
+            <TechItem name="Postgres" icon="devicon-postgresql-plain colored" />
+            <TechItem name="Kubernetes" icon="devicon-kubernetes-plain colored" />
+            <TechItem name="Docker" icon="devicon-docker-plain colored" />
+            <TechItem name="Ubuntu" icon="devicon-ubuntu-plain colored" />
+            <TechItem name="AWS" icon="devicon-amazonwebservices-plain-wordmark colored" />
+            <TechItem name="OpenAI" icon="fa fa-robot" color="#10a37f" />
+            <TechItem name="Claude AI" icon="fa fa-brain" color="#6464FF" />
+          </div>
         </div>
       </div>
     </section>
@@ -116,6 +129,26 @@ const SkillBox = ({ title, description }: SkillBoxProps) => {
     <div className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
       <h4 className="font-bold mb-2">{title}</h4>
       <p className="text-sm text-gray-600">{description}</p>
+    </div>
+  )
+}
+
+interface TechItemProps {
+  name: string
+  icon: string
+  color?: string
+}
+
+// Component for displaying tech stack items
+const TechItem = ({ name, icon, color }: TechItemProps) => {
+  return (
+    <div className="flex flex-col items-center justify-center p-4 bg-white rounded-lg shadow-sm hover:shadow-md transition-all duration-300 w-24 h-24">
+      <i 
+        className={icon} 
+        style={{ fontSize: '2rem', color: color || 'inherit' }}
+        aria-hidden="true"
+      ></i>
+      <span className="mt-2 text-sm font-medium">{name}</span>
     </div>
   )
 }
