@@ -42,14 +42,25 @@ const ServicesSectionNew = () => {
   ]
 
   return (
-    <section id="services" className="py-16 md:py-24 bg-white">
-      <div className="container mx-auto px-4">
+    <section 
+      id="services" 
+      className="py-16 md:py-24 relative text-white"
+      style={{
+        backgroundImage: 'url("https://images.unsplash.com/photo-1639322537228-f710d846310a?q=80&w=2232&auto=format&fit=crop")',
+        backgroundSize: 'cover',
+        backgroundPosition: 'center center',
+        backgroundAttachment: 'fixed',
+        backgroundRepeat: 'no-repeat',
+      }}
+    >
+      {/* Overlay with reduced opacity to show more of the background image */}
+      <div className="absolute inset-0 bg-blue-900 bg-opacity-60"></div>
+      
+      <div className="container mx-auto px-4 relative z-10">
         <div className="text-center mb-16">
-          <h2 className="text-3xl font-bold mb-4">{t('services_title')}</h2>
-          <div className="w-20 h-1 bg-blue-500 mx-auto mt-2 mb-6"></div>
-          <p className="text-gray-700 max-w-2xl mx-auto">
-            {t('services_description')}
-          </p>
+          <h2 className="text-4xl font-bold mb-4 text-white drop-shadow-lg">{t('services_title')}</h2>
+          <div className="w-24 h-1 bg-blue-400 mx-auto mt-2 mb-6 glow"></div>
+          <p className="text-xl max-w-2xl mx-auto text-blue-100">{t('services_description')}</p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -67,7 +78,7 @@ const ServicesSectionNew = () => {
   )
 }
 
-// Simple Service Card component
+// Service Card component with futuristic styling
 const ServiceCard = ({ 
   icon, 
   title, 
@@ -78,10 +89,10 @@ const ServiceCard = ({
   description: string;
 }) => {
   return (
-    <div className="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow border border-gray-100">
-      <div className="text-4xl text-blue-500 mb-4">{icon}</div>
-      <h3 className="text-xl font-bold mb-3">{title}</h3>
-      <p className="text-gray-600">{description}</p>
+    <div className="bg-white/90 backdrop-blur-sm rounded-xl shadow-lg p-8 hover:shadow-xl hover:translate-y-[-5px] transition-all duration-300 border border-blue-100 group">
+      <div className="text-5xl text-blue-600 mb-5 group-hover:scale-110 transform transition-transform duration-300">{icon}</div>
+      <h3 className="text-xl font-bold mb-3 text-blue-900">{title}</h3>
+      <p className="text-gray-700">{description}</p>
     </div>
   )
 }
